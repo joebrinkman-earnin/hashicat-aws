@@ -1,0 +1,20 @@
+{
+  "data": {
+    "type":"vars",
+    "attributes": {
+      "key":"placeholder",
+      "value":"https://www.bluecross.org.uk/sites/default/files/d8/assets/images/118809lprLR.jpg",
+      "category":"terraform",
+      "hcl":false,
+      "sensitive":false
+    },
+    "relationships": {
+      "workspace": {
+        "data": {
+          "id":"ws-7Sz4T7sXUWtG8M6c",
+          "type":"workspaces"
+        }
+      }
+    }
+  }
+}
