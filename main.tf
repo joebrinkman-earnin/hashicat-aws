@@ -61,7 +61,7 @@ resource aws_security_group "hashicat" {
 }
 
 resource random_id "app-server-id" {
-  prefix = "${var.prefix}-hashicat-"
+  prefix      = "${var.prefix}-hashicat-"
   byte_length = 8
 }
 
@@ -91,7 +91,7 @@ data aws_ami "ubuntu" {
   most_recent = true
 
   filter {
-    name   = "name"
+    name = "name"
     #values = ["ubuntu/images/hvm-ssd/ubuntu-disco-19.04-amd64-server-*"]
     values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
   }
@@ -113,7 +113,9 @@ resource aws_instance "hashicat" {
   vpc_security_group_ids      = [aws_security_group.hashicat.id]
 
   tags = {
-    Name = "${var.prefix}-hashicat-instance"
+    Name       = "${var.prefix}-hashicat-instance"
+    Billable   = "true"
+    Department = "devops"
   }
 }
 
