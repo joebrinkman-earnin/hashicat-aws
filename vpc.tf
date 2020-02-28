@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------
 // Modules
-module "vpc_1" {
-  source  = "app.terraform.io/joebrinkman-training/vpc-1/aws"
+module "vpc" {
+  source  = "app.terraform.io/joebrinkman-training/vpc/aws"
   version = "2.24.0"
 
   name = "my-vpc"
